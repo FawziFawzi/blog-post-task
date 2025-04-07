@@ -46,7 +46,7 @@ class PostController extends Controller
     {
        return response()->json([
            'message' => 'Post retrieved successfully',
-           'post' => new PostResource(Post::find($id))
+           'post' => new PostResource(Post::findOrFail($id))
        ],200);
     }
 
